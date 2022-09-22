@@ -52,7 +52,7 @@ android {
         applicationId "br.com.app.fernando.counter"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -79,4 +79,10 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Talsec Release
+    releaseImplementation 'com.aheaditec.talsec.security:TalsecSecurity-Community-Flutter:*-release'
+
+    // Talsec Debug
+    implementation 'com.aheaditec.talsec.security:TalsecSecurity-Community-Flutter:*-dev'
 }
